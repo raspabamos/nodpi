@@ -1,0 +1,22 @@
+[versions]
+agp = "8.6.1"
+appcompat = "1.7.0"
+kotlinStdlibJdk7 = "2.0.20"
+leanback = "1.1.0-rc02"
+leanbackPreference = "1.2.0-alpha04"
+preference = "1.2.1"
+workRuntime = "2.9.1"
+
+[libraries]
+androidx-appcompat = { module = "androidx.appcompat:appcompat", version = "1.7.0" }
+androidx-leanback = { module = "androidx.leanback:leanback", version = "1.0.0" }
+androidx-leanback-preference = { module = "androidx.leanback:leanback-preference", version = "1.0.0" }
+androidx-preference = { module = "androidx.preference:preference", version = "1.2.1" }
+androidx-work-runtime = { module = "androidx.work:work-runtime", version.ref = "workRuntime" }
+kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlinStdlibJdk7" }
+kotlin-stdlib-jdk7 = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk7", version.ref = "kotlinStdlibJdk7" }
+kotlin-stdlib-jdk8 = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk8", version.ref = "kotlinStdlibJdk7" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+

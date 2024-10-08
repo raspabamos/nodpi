@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">NoDPI</string>
+    <string name="app_description">Приложение для обхода блокировок SNI DPI</string>
+    <string name="app_version">1.0.0</string>
+    <string name="app_repository">https://github.com/raspabamos/nodpi</string>
+
+
+    <string name="bypass_block_enable">Bypass Block Enable</string>
+    <string name="bypass_block_enable_ru">Включить обход блокировок</string>
+    <string name="bypass_block_disable">Bypass Block Disable</string>
+    <string name="bypass_block_disable_ru">Выключить обход блокировок</string>
+    <string name="vpn_enable">VPN Enable</string>
+    <string name="vpn_enable_ru">Включить VPN</string>
+    <string name="vpn_disable">VPN Disable</string>
+    <string name="vpn_disable_ru">Выключить VPN</string>
+    <string name="analytic_key">56fcaba7-a420-468e-b776-36c020a3551a</string>
+
+    <string-array name="bypass_block_synonyms">
+        <item>Bypass Block</item>
+        <item>VPN</item>
+        <item>Proxy</item>
+        <item>Block Bypass</item>
+    </string-array>
+
+    <string-array name="bypass_block_synonyms_ru">
+        <item>Обход блокировок</item>
+        <item>VPN</item>
+        <item>Прокси</item>
+        <item>Обход блоков</item>
+    </string-array>
+</resources>

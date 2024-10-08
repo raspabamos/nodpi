@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <capability android:name="actions.intent.OPEN_APP_FEATURE">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="org.nodpi.hello.MainActivity"
+            android:targetPackage="org.nodpi.hello">
+            <parameter
+                android:name="feature"
+                android:key="feature"
+                android:mimeType="text/plain"
+                android:required="true" />
+            <parameter
+                android:name="featureId"
+                android:key="featureId"
+                android:mimeType="text/plain"
+                android:required="true" />
+        </intent>
+    </capability>
+    <shortcut
+        android:shortcutId="bypass_block_enable"
+        android:shortcutShortLabel="@string/bypass_block_enable">
+        <capability-binding android:key="actions.intent.OPEN_APP_FEATURE">
+            <parameter-binding
+                android:key="feature"
+                android:value="@array/bypass_block_synonyms" />
+            <parameter-binding
+                android:key="featureId"
+                android:value="enable" />
+        </capability-binding>
+    </shortcut>
+    <shortcut
+        android:shortcutId="bypass_block_enable_ru"
+        android:shortcutShortLabel="@string/bypass_block_enable_ru">
+        <capability-binding android:key="actions.intent.OPEN_APP_FEATURE">
+            <parameter-binding
+                android:key="feature"
+                android:value="@array/bypass_block_synonyms_ru" />
+            <parameter-binding
+                android:key="featureId"
+                android:value="enable" />
+        </capability-binding>
+    </shortcut>
+    <shortcut
+        android:shortcutId="bypass_block_disable"
+        android:shortcutShortLabel="@string/bypass_block_disable">
+        <capability-binding android:key="actions.intent.OPEN_APP_FEATURE">
+            <parameter-binding
+                android:key="feature"
+                android:value="@array/bypass_block_synonyms" />
+            <parameter-binding
+                android:key="featureId"
+                android:value="disable" />
+        </capability-binding>
+    </shortcut>
+    <shortcut
+        android:shortcutId="bypass_block_disable_ru"
+        android:shortcutShortLabel="@string/bypass_block_disable_ru">
+        <capability-binding android:key="actions.intent.OPEN_APP_FEATURE">
+            <parameter-binding
+                android:key="feature"
+                android:value="@array/bypass_block_synonyms_ru" />
+            <parameter-binding
+                android:key="featureId"
+                android:value="disable" />
+        </capability-binding>
+    </shortcut>
+    <shortcut
+        android:shortcutId="vpn_enable"
+        android:shortcutShortLabel="@string/vpn_enable">
+        <capability-binding android:key="actions.intent.OPEN_APP_FEATURE">
+            <parameter-binding
+                android:key="feature"
+                android:value="@array/bypass_block_synonyms" />
+            <parameter-binding
+                android:key="featureId"
+                android:value="enable" />
+        </capability-binding>
+    </shortcut>
+    <shortcut
+        android:shortcutId="vpn_enable_ru"
+        android:shortcutShortLabel="@string/vpn_enable_ru">
+        <capability-binding android:key="actions.intent.OPEN_APP_FEATURE">
+            <parameter-binding
+                android:key="feature"
+                android:value="@array/bypass_block_synonyms_ru" />
+            <parameter-binding
+                android:key="featureId"
+                android:value="enable" />
+        </capability-binding>
+    </shortcut>
+    <shortcut
+        android:shortcutId="vpn_disable"
+        android:shortcutShortLabel="@string/vpn_disable">
+        <capability-binding android:key="actions.intent.OPEN_APP_FEATURE">
+            <parameter-binding
+                android:key="feature"
+                android:value="@array/bypass_block_synonyms" />
+            <parameter-binding
+                android:key="featureId"
+                android:value="disable" />
+        </capability-binding>
+    </shortcut>
+    <shortcut
+        android:shortcutId="vpn_disable_ru"
+        android:shortcutShortLabel="@string/vpn_disable_ru">
+        <capability-binding android:key="actions.intent.OPEN_APP_FEATURE">
+            <parameter-binding
+                android:key="feature"
+                android:value="@array/bypass_block_synonyms_ru" />
+            <parameter-binding
+                android:key="featureId"
+                android:value="disable" />
+        </capability-binding>
+    </shortcut>
+</shortcuts>

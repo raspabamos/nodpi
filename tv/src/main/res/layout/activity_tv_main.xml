@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/transparent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:descendantFocusability="beforeDescendants"
+    android:nextFocusDown="@+id/start_button"
+    android:contentDescription="Main screen of the application"
+
+    >
+
+    <LinearLayout
+        android:id="@+id/activity_tv_main"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:background="@android:color/black"
+        android:padding="16dp">
+
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:contentDescription="@string/app_name"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Для запуска обхода блокировок, нажмите кнопку Запустить. Внизу кнопки отображатеся статус подключения. Если возникла ошибка, свяжитесь с нами и сообщите название Вашего провайдера!"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/start_button"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Запустить"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:nextFocusDown="@+id/status_text"
+            android:nextFocusUp="@+id/title" />
+<!--        android:background="@xml/state_start_button"-->
+        <TextView
+            android:id="@+id/status_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="status"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:contentDescription="Status text"
+            android:nextFocusDown="@+id/request_permissions_container"
+            android:nextFocusUp="@+id/start_button" />
+
+        <LinearLayout
+            android:id="@+id/request_permissions_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ВАЖНО Для правильной работы приложения в фоновом режиме, необходимо отключить оптимизацию батареи для приложения NoDPI. "
+                android:textColor="@android:color/white"
+                />
+
+            <Button
+                android:id="@+id/request_permissions_button"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="Отключить для NoDPI"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:nextFocusDown="@+id/link"
+                android:nextFocusUp="@+id/status_text" />
+
+<!--            android:background="@color/material_primary_600"-->
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Открытый исходный код. Вопросы задавайте в репозитории:"
+            android:textColor="@android:color/white"
+            />
+
+        <TextView
+            android:id="@+id/link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoLink="web"
+            android:text="@string/app_repository"
+            android:textColor="@android:color/white"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:descendantFocusability="blocksDescendants"
+            android:nextFocusDown="@+id/start_button"
+            android:nextFocusUp="@+id/start_button" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Версия: "
+            android:textColor="@android:color/white"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_version"
+            android:textColor="@android:color/white"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
