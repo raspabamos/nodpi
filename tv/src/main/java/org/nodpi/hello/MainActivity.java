@@ -347,9 +347,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void startVpn() {
-        startService(dpiIntent);
         if (status.equals("active")) {
             Toast.makeText(MainActivity.this, "Запускаем DPI", Toast.LENGTH_SHORT).show();
+            startService(dpiIntent);
             startService(serviceIntent);
             //startButton.setBackgroundResource(R.drawable.circle_button_green);
 
@@ -400,9 +400,9 @@ public class MainActivity extends AppCompatActivity {
         getSharedPreferences("app_state", MODE_PRIVATE).edit().putString("status", status).apply();
         //startButton.setBackgroundResource(R.drawable.circle_button_red);
         startButton.setBackgroundResource(R.color.light_green);
-        startService(dpiIntent);
         statusText.setText("Выключено. Нажмите Запустить");
         updateNotification("Выключено");
+        startService(dpiIntent);
     }
 
     @Override
