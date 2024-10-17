@@ -348,7 +348,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void startVpn() {
         if (status.equals("active")) {
-            Toast.makeText(MainActivity.this, "Запускаем DPI", Toast.LENGTH_SHORT).show();
+            // Toast.makeText(MainActivity.this, "Запускаем DPI", Toast.LENGTH_SHORT).show();
             startService(dpiIntent);
             startService(serviceIntent);
             //startButton.setBackgroundResource(R.drawable.circle_button_green);
@@ -367,9 +367,9 @@ public class MainActivity extends AppCompatActivity {
                     // Update your UI here
                     switch (status) {
                         case ERROR:
-                            updateNotification("Ошибка проверки связи");
-                            statusText.setText("Ошибка проверки связи");
-                            stopVpn();
+                            updateNotification("Не с первого раза. Поверьте в Ютубе или браузере");
+                            statusText.setText("Не с первого раза. Проверьте в Ютубе или браузере");
+                           // stopVpn();
                             break;
                         case IDLE:
                             updateNotification("Проверка связи не начата");
@@ -380,8 +380,8 @@ public class MainActivity extends AppCompatActivity {
                             statusText.setText("Проверка связи...");
                             break;
                         case SUCCESS:
-                            updateNotification("Связь успешно проверена");
-                            statusText.setText("Связь успешно проверена");
+                            updateNotification("Связь успешно проверена. Вы великолепны!");
+                            statusText.setText("Связь успешно проверена. Вы великолепны!");
                             break;
                     }
                 }
